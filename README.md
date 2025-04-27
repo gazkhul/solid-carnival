@@ -6,10 +6,10 @@ customer servers config
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 cd solid-carnival
-uv venv .venv
+uv venv
 source .venv/bin/activate
-uv sync
+uv sync --no-default-groups
 
 # dev env
-# uv pip install -r requirements.txt
-# pre-commit install
+uv sync
+pre-commit install
